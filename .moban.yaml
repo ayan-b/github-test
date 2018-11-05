@@ -1,0 +1,29 @@
+name: Desktop Wallpaper Changer
+description: Change your desktop wallpaper!
+url: https://github.com/ayan-b/Desktop-Wallpaper-Changer
+author: Ayan Banerjee
+contact: ayanbn7@gmail.com
+license: MIT
+version: 0.0.1
+release: 0.0.1
+build_version: 0.0.1
+package_module: dwc
+docs_dir: false
+
+dependencies:
+ - appdirs==1.4.3
+
+configuration:
+  configuration_dir: config
+  template_dir:
+    - .moban.dt
+    - ../pypi-mobans/templates
+  configuration: .moban.yaml
+targets:
+  - setup.py: setup.py.jj2
+  - .travis.yml: travis.yml
+  - requirements.txt: requirements.txt.jj2
+  - test-requirements.txt: test-requirements.txt.jj2
+  - LICENSE.md: MIT
+  - README.rst: README.rst
+  - .gitignore: .gitignore.jj2
