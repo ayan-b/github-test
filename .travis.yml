@@ -20,4 +20,4 @@ moban:
 
 install:
     - pip install -r test-requirements.txt
-    - pip setup.py install
+    - python setup.py install
