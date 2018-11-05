@@ -20,4 +20,3 @@ moban:
   script:
     - moban
     - git diff --exit-code
-    - python setup.py install
