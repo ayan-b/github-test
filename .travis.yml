@@ -19,7 +19,5 @@ moban:
     - git diff --exit-code
 
 install:
-    image: python:3.5
-    script:
-      - pip install -r test-requirements.txt
-      - python setup.py install
+    - pip install -r test-requirements.txt
+    - python setup.py install
