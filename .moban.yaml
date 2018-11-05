@@ -21,7 +21,6 @@ configuration:
   configuration: .moban.yaml
 targets:
   - setup.py: setup.py.jj2
-  - .travis.yml: travis.yml
   - requirements.txt: requirements.txt.jj2
   - test-requirements.txt: test-requirements.txt.jj2
   - LICENSE.md: MIT
