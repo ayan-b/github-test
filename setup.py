@@ -5,7 +5,9 @@ import os
 import sys
 import codecs
 from shutil import rmtree
-from setuptools import setup, find_packages, Command
+
+from setuptools import Command, setup, find_packages
+
 from platform import python_implementation
 PY2 = sys.version_info[0] == 2
 PY26 = PY2 and sys.version_info[1] < 7
@@ -38,7 +40,15 @@ CLASSIFIERS = [
 ]
 
 INSTALL_REQUIRES = [
-    'appdirs==1.4.3',
+    'dependency1',
+    'git+https://github.com/user/repo#egg=ver',
+    'git+https://github.com/user/repo#egg=ver',
+    'hello',
+    'dependency2',
+    'dep#egg=ver',
+    'git+https://github.com/user/repo#egg=ver',
+    'dependency',
+    'dependency#egg=ver',
 ]
 SETUP_COMMANDS = {}
 

@@ -1,2 +1,11 @@
-appdirs==1.4.3
+dependency1
+#standalone comment
+git+https://github.com/user/repo#egg=ver #comment
+git+https://github.com/user/repo#egg=ver #egg #comment #egg
+hello # inline comment #egg
+dependency2 #egg
+dep#egg=ver #egg
+git+https://github.com/user/repo#egg=ver
+dependency#attached_comment
+dependency #egg=ver
 moban
