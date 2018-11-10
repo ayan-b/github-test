@@ -1,3 +1,3 @@
 moban
-codecov
+codecov~=2.0.5
 pytest

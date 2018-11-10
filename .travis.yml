@@ -1,20 +1,22 @@
+sudo: false
 language: python
-cache: pip
-
-matrix:
-    include:
-        - os: linux
-          sudo: required
-          dist: trusty
-          python: 3.6
-
+python:
+  - 2.7
+  - 3.6
+notifications:
+  email: false
 install:
-    - pip install -r test-requirements.txt
+  - pip install -r test-requirements.txt
+stages:
+  - test
 
-moban:
-  image: python:3.6
-  script:
-    - pytest
+stage: test
+
+script:
+  - pytest
 
 after_success:
+  - codecov
+
+after_failure:
   - codecov
