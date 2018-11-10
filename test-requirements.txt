@@ -1,2 +1,6 @@
-appdirs==1.4.3
 moban
+codecov~=2.0.5
+pytest
+coverage==4.4.1
+pytest-cov~=2.4
+git+https://github.com/MrSenko/coverage-jinja-plugin#egg=coverage-jinja-plugin

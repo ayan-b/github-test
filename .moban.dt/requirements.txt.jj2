@@ -1,4 +1,3 @@
-appdirs==1.4.3 #hello
-#hello
-# test
-git+https://github.com/hello/hello
+{% for dependency in dependencies %}
+{{ dependency }}
+{% endfor %}

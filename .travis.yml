@@ -1,23 +1,22 @@
+sudo: false
 language: python
-cache: pip
-
-matrix:
-    include:
-        - os: linux
-          sudo: required
-          dist: trusty
-          python: 3.6
-
-moban:
-  image: python:3.5
-  before_script:
-    - pip install moban
-    - git clone https://github.com/moremoban/pypi-mobans ../pypi-mobans
-
-  script:
-    - moban
-    - git diff --exit-code
-
+python:
+  - 3.5
+  - 3.6
+notifications:
+  email: false
 install:
-    - pip install -r test-requirements.txt
-    - pip setup.py install
+  - pip install -r test-requirements.txt
+stages:
+  - test
+
+stage: test
+
+script:
+  - pytest tests
+
+after_success:
+  - codecov
+
+after_failure:
+  - codecov
