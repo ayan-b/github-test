@@ -13,7 +13,7 @@ stages:
 stage: test
 
 script:
-  - pytest
+  - pytest --cov=hello tests
 
 after_success:
   - codecov

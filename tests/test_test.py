@@ -1,4 +1,5 @@
 import pytest
+from hello import hello
 
 def test_demo():
-    assert 1 == 1
+    assert hello.hi() == "hi"
